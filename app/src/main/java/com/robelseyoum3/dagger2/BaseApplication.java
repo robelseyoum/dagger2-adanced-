@@ -1,6 +1,5 @@
 package com.robelseyoum3.dagger2;
 
-
 import com.robelseyoum3.dagger2.di.DaggerAppComponent;
 
 import dagger.android.AndroidInjector;
