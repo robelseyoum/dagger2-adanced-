@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.robelseyoum3.dagger2.BaseActivity;
 import com.robelseyoum3.dagger2.R;
+import com.robelseyoum3.dagger2.ui.main.posts.PostsFragments;
 import com.robelseyoum3.dagger2.ui.main.profile.ProfileFragment;
 
 public class MainActivity extends BaseActivity {
@@ -25,7 +26,7 @@ public class MainActivity extends BaseActivity {
 
     private void testFragment(){
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.main_container, new ProfileFragment())
+                .replace(R.id.main_container, new PostsFragments())
                 .commit();
     }
 

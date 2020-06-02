@@ -3,6 +3,7 @@ package com.robelseyoum3.dagger2.di;
 import com.robelseyoum3.dagger2.di.auth.AuthModule;
 import com.robelseyoum3.dagger2.di.auth.AuthViewModelsModule;
 import com.robelseyoum3.dagger2.di.main.MainFragmentBuildersModule;
+import com.robelseyoum3.dagger2.di.main.MainModule;
 import com.robelseyoum3.dagger2.di.main.MainViewModelsModule;
 import com.robelseyoum3.dagger2.ui.auth.AuthActivity;
 import com.robelseyoum3.dagger2.ui.main.MainActivity;
@@ -22,7 +23,10 @@ public abstract class ActivityBuildersModule {
 
     //here used to create main activity sub component
     @ContributesAndroidInjector(
-            modules = {MainFragmentBuildersModule.class, MainViewModelsModule.class}
+            modules = {MainFragmentBuildersModule.class,
+                    MainViewModelsModule.class,
+                    MainModule.class
+            }
     )
     abstract MainActivity contributeMainActivity();
 }
